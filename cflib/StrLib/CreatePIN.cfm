@@ -1,3 +1,35 @@
+<!---
+This library is part of the Common Function Library Project. An open source
+	collection of UDF libraries designed for ColdFusion 5.0 and higher. For more information,
+	please see the web site at:
+
+		http://www.cflib.org
+
+	Warning:
+	You may not need all the functions in this library. If speed
+	is _extremely_ important, you may want to consider deleting
+	functions you do not plan on using. Normally you should not
+	have to worry about the size of the library.
+
+	License:
+	This code may be used freely.
+	You may modify this code as you see fit, however, this header, and the header
+	for the functions must remain intact.
+
+	This code is provided as is.  We make no warranty or guarantee.  Use of this code is at your own risk.
+--->
+
+<cfscript>
+/**
+ * Flexible PIN generator, supporting alphabetical, numeric, and alphanumeric types, upper, lower, and mixed cases, and validating prescence of letters and numbers in alphanumeric PINs at least 2 characters long.
+ * 
+ * @param chars 	 Number of characters to return. (Required)
+ * @param type 	 Type of PIN to create. Types are: n (numeric), a (alphabetical), m (mixed, or alphanumeric). Default is m. (Optional)
+ * @param format 	 Case of PIN. Options are: u (uppercase), l (lowercase), m (mixed). Default is m. (Optional)
+ * @return Returns a string. 
+ * @author Sierra Bufe (sierra@brighterfusion.com) 
+ * @version 1, May 14, 2002 
+ */
 function createPIN(chars){
 	var type    = "m";
 	var format  = "m";
@@ -77,3 +109,4 @@ function createPIN(chars){
 		
 	return PIN;
 }
+</cfscript>

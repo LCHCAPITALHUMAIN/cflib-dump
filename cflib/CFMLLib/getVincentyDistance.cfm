@@ -1,3 +1,39 @@
+<!---
+This library is part of the Common Function Library Project. An open source
+	collection of UDF libraries designed for ColdFusion 5.0 and higher. For more information,
+	please see the web site at:
+
+		http://www.cflib.org
+
+	Warning:
+	You may not need all the functions in this library. If speed
+	is _extremely_ important, you may want to consider deleting
+	functions you do not plan on using. Normally you should not
+	have to worry about the size of the library.
+
+	License:
+	This code may be used freely.
+	You may modify this code as you see fit, however, this header, and the header
+	for the functions must remain intact.
+
+	This code is provided as is.  We make no warranty or guarantee.  Use of this code is at your own risk.
+--->
+
+<cfscript>
+/**
+ * Calculates geodetic distance between two points specified by latitude/longitude using Vincenty inverse formula for ellipsoids: http://www.movable-type.co.uk/scripts/latlong-vincenty.html
+ * version 0.1 by Stephen Withington
+ * version 1.0 by Adam Cameron: throwing exceptions for error conditions instead of returning invalid strings
+ * 
+ * @param lat1 	 Latitude of first point as a decimal (Required)
+ * @param lon1 	 Longitude of first point as a decimal (Required)
+ * @param lat2 	 Latitude of second point as a decimal (Required)
+ * @param lon2 	 Longitude of second point as a decimal (Required)
+ * @param units 	 Units of measure, one of: m (metres, default), km (kilometres),sm (statutory miles), nm (nautical miles), yd (yards), ft (feet), in (inches), cm (centimetres), mm (millimetres). (Optional)
+ * @return Returns a numeric value that is the distance between the two points 
+ * @author Stephen Withington (stephenwithington@gmail.com) 
+ * @version 1, August 26, 2012 
+ */
 numeric function getVincentyDistance(required numeric lat1, required numeric lon1, required numeric lat2, required numeric lon2, string units="m" ) {
 	// WGS-84 ellipsoid params
 	var a = 6378137;
@@ -95,3 +131,4 @@ numeric function getVincentyDistance(required numeric lat1, required numeric lon
 
 	return s;
 };
+</cfscript>

@@ -1,3 +1,37 @@
+<!---
+This library is part of the Common Function Library Project. An open source
+	collection of UDF libraries designed for ColdFusion 5.0 and higher. For more information,
+	please see the web site at:
+
+		http://www.cflib.org
+
+	Warning:
+	You may not need all the functions in this library. If speed
+	is _extremely_ important, you may want to consider deleting
+	functions you do not plan on using. Normally you should not
+	have to worry about the size of the library.
+
+	License:
+	This code may be used freely.
+	You may modify this code as you see fit, however, this header, and the header
+	for the functions must remain intact.
+
+	This code is provided as is.  We make no warranty or guarantee.  Use of this code is at your own risk.
+--->
+
+<!---
+ Generate a random key with options
+ 
+ @param case 	 upper, lower, or mixed case - defaults upper (Optional)
+ @param format 	 numeric, string, alphanumeric or special (Optional)
+ @param length 	 length of key to generate (Optional)
+ @param specialChars 	 ist of special chars to help generate key from (Optional)
+ @param fixedPrefix 	 A prefix prepended to the generated key (Optional)
+ @param fixedSuffix 	 A suffix appended to the generated key (Optional)
+ @return returns a string. 
+ @author Michael Sharman (michael@chapter31.com) 
+ @version 0, May 9, 2009 
+--->
 <cffunction name="generateRandomKey" access="public" output="false" returntype="string">
 	<cfargument name="case" type="string" default="upper" hint="Whether upper, lower or mixed" />
 	<cfargument name="format" type="string" default="alphanumeric" hint="Whether to generate numeric, string, alphanumeric or special (includes alphanumeric and special characters such as ! @ & etc)" />

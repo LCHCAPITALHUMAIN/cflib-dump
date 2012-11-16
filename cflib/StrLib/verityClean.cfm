@@ -1,3 +1,38 @@
+<!---
+This library is part of the Common Function Library Project. An open source
+	collection of UDF libraries designed for ColdFusion 5.0 and higher. For more information,
+	please see the web site at:
+
+		http://www.cflib.org
+
+	Warning:
+	You may not need all the functions in this library. If speed
+	is _extremely_ important, you may want to consider deleting
+	functions you do not plan on using. Normally you should not
+	have to worry about the size of the library.
+
+	License:
+	This code may be used freely.
+	You may modify this code as you see fit, however, this header, and the header
+	for the functions must remain intact.
+
+	This code is provided as is.  We make no warranty or guarantee.  Use of this code is at your own risk.
+--->
+
+<cfscript>
+/**
+ * Creates a verity &quot;safe&quot; search string.
+ * Version 2 rewritten by Raymond Camden
+ * Version 3 - made \ into \\ thanks to user comment
+ * Version 4 - Fixed bugs identified by John Salonich II (21 JAN 2003), Neal Todd (06 FEB 04), Jeremy Halliwell (01 APR 03). Also added fix for curly brackets, comma, funny quote and plus.
+ * v5 bug fixed by Dominic OConnor
+ * v6 fix by Mark, when we remove bad chars, replace with space, not nothing
+ * 
+ * @param input 	 String to Verity clean. (Required)
+ * @return Returns a string. 
+ * @author Simon Potter (spotter@redbanner.com) 
+ * @version 6, April 24, 2009 
+ */
 function verityClean(input) {
 	//Value to return after cleaning
 	var cleanText = trim(input);
@@ -74,3 +109,4 @@ function verityClean(input) {
 	// Return the cleaned value
 	return cleanText;
 }
+</cfscript>

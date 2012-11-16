@@ -1,3 +1,38 @@
+<!---
+This library is part of the Common Function Library Project. An open source
+	collection of UDF libraries designed for ColdFusion 5.0 and higher. For more information,
+	please see the web site at:
+
+		http://www.cflib.org
+
+	Warning:
+	You may not need all the functions in this library. If speed
+	is _extremely_ important, you may want to consider deleting
+	functions you do not plan on using. Normally you should not
+	have to worry about the size of the library.
+
+	License:
+	This code may be used freely.
+	You may modify this code as you see fit, however, this header, and the header
+	for the functions must remain intact.
+
+	This code is provided as is.  We make no warranty or guarantee.  Use of this code is at your own risk.
+--->
+
+<cfscript>
+/**
+ * Performs venn type operations on two lists.
+ * 
+ * @param listA 	 The first list. (Required)
+ * @param listB 	 The second list. (Required)
+ * @param returnListType 	 Return list type. Values can be: AandB, AorB, AnotB, BnotA  (Required)
+ * @param listADelimiter 	 List A delimiter. Defaults to a comma. (Optional)
+ * @param listBDelimiter 	 List B delimiter. Defaults to a comma. (Optional)
+ * @param returnListDelimiter 	 Return list delimiter. Defaults to a comma. (Optional)
+ * @return Returns a list. 
+ * @author Christopher Jordan (cjordan@placs.net) 
+ * @version 1, February 14, 2006 
+ */
 function listVenn(ListA,ListB,ReturnListType){
 	var i					= "";
 	var ThisListItem		= "";
@@ -78,3 +113,4 @@ function listVenn(ListA,ListB,ReturnListType){
 	}
 	return ReturnList;
 }
+</cfscript>

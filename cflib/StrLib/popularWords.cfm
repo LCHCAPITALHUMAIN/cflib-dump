@@ -1,3 +1,36 @@
+<!---
+This library is part of the Common Function Library Project. An open source
+	collection of UDF libraries designed for ColdFusion 5.0 and higher. For more information,
+	please see the web site at:
+
+		http://www.cflib.org
+
+	Warning:
+	You may not need all the functions in this library. If speed
+	is _extremely_ important, you may want to consider deleting
+	functions you do not plan on using. Normally you should not
+	have to worry about the size of the library.
+
+	License:
+	This code may be used freely.
+	You may modify this code as you see fit, however, this header, and the header
+	for the functions must remain intact.
+
+	This code is provided as is.  We make no warranty or guarantee.  Use of this code is at your own risk.
+--->
+
+<!---
+ Returns the most popular words in a query column and their count.
+ Version 2 mods by Raymond Camden
+ 
+ @param qQuery 	 The query to inspect. (Required)
+ @param targetCol 	 The column to inspect. (Required)
+ @param returnCount 	 Number of top words to return. Defaults to 10. (Optional)
+ @param ignoreWords 	 Words to ignore. Defaults to: I,me,the,and,if,but,not,as,a,an,for,of,this,on,to,is (Optional)
+ @return Returns a query. 
+ @author C. Hatton Humphrey (hat@guardian-web.com) 
+ @version 2, August 12, 2005 
+--->
 <cffunction name="popularWords" returntype="query" output="No">
 	<cfargument name="qQuery" type="query" required="true">
 	<cfargument name="targetCol" type="string" required="true">

@@ -1,3 +1,35 @@
+<!---
+This library is part of the Common Function Library Project. An open source
+	collection of UDF libraries designed for ColdFusion 5.0 and higher. For more information,
+	please see the web site at:
+
+		http://www.cflib.org
+
+	Warning:
+	You may not need all the functions in this library. If speed
+	is _extremely_ important, you may want to consider deleting
+	functions you do not plan on using. Normally you should not
+	have to worry about the size of the library.
+
+	License:
+	This code may be used freely.
+	You may modify this code as you see fit, however, this header, and the header
+	for the functions must remain intact.
+
+	This code is provided as is.  We make no warranty or guarantee.  Use of this code is at your own risk.
+--->
+
+<!---
+ Programmatically kill any cfthread from any request.
+ 
+ @param cfadminPassword 	 ColdFusion Admin password. (Required)
+ @param cfthreadname 	 If killing a single thread and you know its cfthread name= attribute, use this. (Optional)
+ @param threadname 	 f killing a single thread and you already know its java threadname, use this. (Optional)
+ @param prefix 	 If you want to kill a set of threads which have a common prefix string, use this. (Optional)
+ @return Returns the number of threads killed. 
+ @author Kevin Miller (kmiller@websolete.com) 
+ @version 0, June 11, 2009 
+--->
 <cffunction name="threadMurder" access="public" description="forcefully destroys any cfthread which matches the naming criteria; returns the number of cfthreads which were killed" output="false" returntype="numeric">
 	<cfargument name="cfadminPassword" type="string" required="true"><!--- since we access the cfadmin api, we require the password for login --->	
 	<cfargument name="cfthreadName" type="string" required="false" default=""><!--- if we're needing to kill a specific thread, this is the cfthread name= attribute --->

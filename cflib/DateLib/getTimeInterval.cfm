@@ -1,3 +1,35 @@
+<!---
+This library is part of the Common Function Library Project. An open source
+	collection of UDF libraries designed for ColdFusion 5.0 and higher. For more information,
+	please see the web site at:
+
+		http://www.cflib.org
+
+	Warning:
+	You may not need all the functions in this library. If speed
+	is _extremely_ important, you may want to consider deleting
+	functions you do not plan on using. Normally you should not
+	have to worry about the size of the library.
+
+	License:
+	This code may be used freely.
+	You may modify this code as you see fit, however, this header, and the header
+	for the functions must remain intact.
+
+	This code is provided as is.  We make no warranty or guarantee.  Use of this code is at your own risk.
+--->
+
+<cfscript>
+/**
+ * Returns the interval since a date in a Twitter like format (e.g. 5 minutes ago)
+ * version 0.9 by Simon Bingham
+ * version 1.0 by Adam Cameron - tweaked to correct pluralisation when the interval value was 1.
+ * 
+ * @param date 	 Date to format (Required)
+ * @return Returns a string 
+ * @author Simon Bingham (me@simonbingham.me.uk) 
+ * @version 1, July 27, 2012 
+ */
 function getTimeInterval(date){
 	var interval	= "";
 	var offset		= 0;
@@ -38,3 +70,4 @@ function getTimeInterval(date){
 	}
 	return interval;
 }
+</cfscript>

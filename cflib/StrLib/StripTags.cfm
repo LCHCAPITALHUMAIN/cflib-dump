@@ -1,3 +1,36 @@
+<!---
+This library is part of the Common Function Library Project. An open source
+	collection of UDF libraries designed for ColdFusion 5.0 and higher. For more information,
+	please see the web site at:
+
+		http://www.cflib.org
+
+	Warning:
+	You may not need all the functions in this library. If speed
+	is _extremely_ important, you may want to consider deleting
+	functions you do not plan on using. Normally you should not
+	have to worry about the size of the library.
+
+	License:
+	This code may be used freely.
+	You may modify this code as you see fit, however, this header, and the header
+	for the functions must remain intact.
+
+	This code is provided as is.  We make no warranty or guarantee.  Use of this code is at your own risk.
+--->
+
+<cfscript>
+/**
+ * Strip xml-like tags from a string when they are within or not within a list of tags.
+ * 
+ * @param stripmode 	 A string, disallow or allow. Specifies if the list of tags in the mytags attribute is a list of tags to allow or disallow. (Required)
+ * @param mytags 	 List of tags to either allow or disallow. (Required)
+ * @param mystring 	 The string to check. (Required)
+ * @param findonly 	 Boolean value. If true, returns the first match. If false, all instances are replaced. (Optional)
+ * @return Returns either a string or the first instance of a match. 
+ * @author Isaac Dealey (info@turnkey.to) 
+ * @version 2, September 22, 2004 
+ */
 function stripTags(stripmode,mytags,mystring) {
 	var spanquotes = "([^"">]*""[^""]*"")*";
 	var spanstart = "[[:space:]]*/?[[:space:]]*";
@@ -55,3 +88,4 @@ function stripTags(stripmode,mytags,mystring) {
 	if (findonly) { return ""; } // return an empty string indicating no invalid tags found
 	else { return mystring; } // return the new string discluding any invalid tags
 }
+</cfscript>

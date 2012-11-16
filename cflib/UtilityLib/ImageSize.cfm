@@ -1,3 +1,35 @@
+<!---
+This library is part of the Common Function Library Project. An open source
+	collection of UDF libraries designed for ColdFusion 5.0 and higher. For more information,
+	please see the web site at:
+
+		http://www.cflib.org
+
+	Warning:
+	You may not need all the functions in this library. If speed
+	is _extremely_ important, you may want to consider deleting
+	functions you do not plan on using. Normally you should not
+	have to worry about the size of the library.
+
+	License:
+	This code may be used freely.
+	You may modify this code as you see fit, however, this header, and the header
+	for the functions must remain intact.
+
+	This code is provided as is.  We make no warranty or guarantee.  Use of this code is at your own risk.
+--->
+
+<cfscript>
+/**
+ * Returns width and height of images based on image type.
+ * v2 fix by John Bliss
+ * 
+ * @param filename 	 Absolute or relative path to file. (Required)
+ * @param mimetype 	 Minetype for the file. (Optional)
+ * @return Returns a struct containing height and width information, or an error string. 
+ * @author Peter Crowley (pcrowley@webzone.ie) 
+ * @version 2, March 20, 2010 
+ */
 function ImageSize(filename) {
 	// Jpeg variables
 	var nFileLength=0; var nBlockLength=0; var nMarker=0;
@@ -78,3 +110,4 @@ function ImageSize(filename) {
 	fInput.close();
 	return "Unhandled image type";
 }
+</cfscript>

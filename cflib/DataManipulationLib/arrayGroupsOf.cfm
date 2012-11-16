@@ -1,3 +1,34 @@
+<!---
+This library is part of the Common Function Library Project. An open source
+	collection of UDF libraries designed for ColdFusion 5.0 and higher. For more information,
+	please see the web site at:
+
+		http://www.cflib.org
+
+	Warning:
+	You may not need all the functions in this library. If speed
+	is _extremely_ important, you may want to consider deleting
+	functions you do not plan on using. Normally you should not
+	have to worry about the size of the library.
+
+	License:
+	This code may be used freely.
+	You may modify this code as you see fit, however, this header, and the header
+	for the functions must remain intact.
+
+	This code is provided as is.  We make no warranty or guarantee.  Use of this code is at your own risk.
+--->
+
+<!---
+ Splits or iterates over the array in number of groups.
+ 
+ @param arrObj 	 Array to split up in groups. (Required)
+ @param intGroup 	 Number of items allowed on each group. (Required)
+ @param padding 	  What should it be filled with in case there's empty slots. (Optional)
+ @return Returns an array. 
+ @author Marcos Placona (marcos.placona@gmail.com) 
+ @version 1, February 4, 2010 
+--->
 <cffunction name="arrayGroupsOf" access="public" output="false" returntype="array">
 	<cfargument name="arrObj" type="array" required="true" hint="An array object that will be split up in groups">
 	<cfargument name="intGroup" type="numeric" required="true" hint="Number of items on each group">

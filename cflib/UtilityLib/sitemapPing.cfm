@@ -1,3 +1,35 @@
+<!---
+This library is part of the Common Function Library Project. An open source
+	collection of UDF libraries designed for ColdFusion 5.0 and higher. For more information,
+	please see the web site at:
+
+		http://www.cflib.org
+
+	Warning:
+	You may not need all the functions in this library. If speed
+	is _extremely_ important, you may want to consider deleting
+	functions you do not plan on using. Normally you should not
+	have to worry about the size of the library.
+
+	License:
+	This code may be used freely.
+	You may modify this code as you see fit, however, this header, and the header
+	for the functions must remain intact.
+
+	This code is provided as is.  We make no warranty or guarantee.  Use of this code is at your own risk.
+--->
+
+<!---
+ Ping multiple search engines with your sitemap.xml file and get the server response.
+ 
+ @param service 	 A comma delimited string with search engine names. (Required)
+ @param urltosubmit 	 A fully qualified URL to submit to search engines. (Required)
+ @param feedback 	 The response to a submitted url by a specified server. (Optional)
+ @param fbtype 	 The desired format of the returned response: XML or an array of structures. (Optional)
+ @return An (optional) XML fragment OR array of structs with the response from the pinged server(s). 
+ @author Frank Marion (mail@frankmarion.com) 
+ @version 1, August 26, 2010 
+--->
 <cffunction name="sitemapPing" displayname="sitemapPing" access="public" output="false" returntype="Any" hint="Ping search engine services with sitemap location">
 
 	<!--- Arg! --->

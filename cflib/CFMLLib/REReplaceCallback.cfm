@@ -1,3 +1,35 @@
+<!---
+This library is part of the Common Function Library Project. An open source
+	collection of UDF libraries designed for ColdFusion 5.0 and higher. For more information,
+	please see the web site at:
+
+		http://www.cflib.org
+
+	Warning:
+	You may not need all the functions in this library. If speed
+	is _extremely_ important, you may want to consider deleting
+	functions you do not plan on using. Normally you should not
+	have to worry about the size of the library.
+
+	License:
+	This code may be used freely.
+	You may modify this code as you see fit, however, this header, and the header
+	for the functions must remain intact.
+
+	This code is provided as is.  We make no warranty or guarantee.  Use of this code is at your own risk.
+--->
+
+<!---
+ REReplaceCallback behaves like REReplace, except instead of supplying a replacement string, you supply a function to invoke on each match.
+ 
+ @param string 	 String to parse. (Required)
+ @param pattern 	 Regex pattern to use. (Required)
+ @param callback 	 UDF to be used as a callback. (Required)
+ @param scope 	 How many replacements should be made. Defaults to one. (Optional)
+ @return Returns a string. 
+ @author Barney Boisvert (bboisvert@gmail.com) 
+ @version 1, March 10, 2010 
+--->
 <cffunction name="REReplaceCallback" access="private" output="false" returntype="string">
   <cfargument name="string" type="string" required="true" />
   <cfargument name="pattern" type="string" required="true" />

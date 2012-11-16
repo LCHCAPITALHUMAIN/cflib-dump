@@ -1,3 +1,36 @@
+<!---
+This library is part of the Common Function Library Project. An open source
+	collection of UDF libraries designed for ColdFusion 5.0 and higher. For more information,
+	please see the web site at:
+
+		http://www.cflib.org
+
+	Warning:
+	You may not need all the functions in this library. If speed
+	is _extremely_ important, you may want to consider deleting
+	functions you do not plan on using. Normally you should not
+	have to worry about the size of the library.
+
+	License:
+	This code may be used freely.
+	You may modify this code as you see fit, however, this header, and the header
+	for the functions must remain intact.
+
+	This code is provided as is.  We make no warranty or guarantee.  Use of this code is at your own risk.
+--->
+
+<cfscript>
+/**
+ * Bins the elements of an array into equally spaced containers and returns the number of elements in each container.
+ * 
+ * @param y 	 Array of numbers. (Required)
+ * @param low 	 Lowest container midpoint. (Optional)
+ * @param hi 	 Highest container midpint. (Optional)
+ * @param num 	 Number of containers. (Optional)
+ * @return Returns an array. 
+ * @author Paul Dragos (dragosp@battelle.org) 
+ * @version 1, January 2, 2007 
+ */
 function histogram(y) {
 	// Declarations
 	var m = ArrayNew(1);	// array of bin Midpoints
@@ -48,3 +81,4 @@ function histogram(y) {
 	}
     return x;
 }
+</cfscript>

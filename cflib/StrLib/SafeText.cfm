@@ -1,3 +1,38 @@
+<!---
+This library is part of the Common Function Library Project. An open source
+	collection of UDF libraries designed for ColdFusion 5.0 and higher. For more information,
+	please see the web site at:
+
+		http://www.cflib.org
+
+	Warning:
+	You may not need all the functions in this library. If speed
+	is _extremely_ important, you may want to consider deleting
+	functions you do not plan on using. Normally you should not
+	have to worry about the size of the library.
+
+	License:
+	This code may be used freely.
+	You may modify this code as you see fit, however, this header, and the header
+	for the functions must remain intact.
+
+	This code is provided as is.  We make no warranty or guarantee.  Use of this code is at your own risk.
+--->
+
+<cfscript>
+/**
+ * Removes potentially nasty HTML text.
+ * Version 2 by Lena Aleksandrova - changes include fixing a bug w/ arguments and use of REreplace where REreplaceNoCase should have been used.
+ * version 4 fix by Javier Julio - when a bad event is removed, remove the arg too, ie, remove onclick=&quot;foo&quot;, not just onclick.
+ * 
+ * @param text 	 String to be modified. (Required)
+ * @param strip 	 Boolean value (defaults to false) that determines if HTML should be stripped or just escaped out. (Optional)
+ * @param badTags 	 A list of bad tags. Has a long default list. Consult source. (Optional)
+ * @param badEvents 	 A list of bad HTML events. Has a long default list. Consult source. (Optional)
+ * @return Returns a string. 
+ * @author Nathan Dintenfass (nathan@changemedia.com) 
+ * @version 4, October 16, 2006 
+ */
 function safetext(text) {
 	//default mode is "escape"
 	var mode = "escape";
@@ -51,3 +86,4 @@ function safetext(text) {
 	//return theText
 	return theText;
 }
+</cfscript>

@@ -27,10 +27,8 @@
 		
 		<cfif !FileExists(udf)>
 		
-			<cfhttp method="get" url="#baseUrl#getudf&udfid=#id#" result="r"></cfhttp>
-			<cfwddx action="wddx2cfml" input="#r.filecontent#" output="content">
-			
-			<cffile action="write" addnewline="false" file="#udf#" output="#content.code#">
+			<cfhttp method="get" url="http://www.cflib.org/udfdownload/#id#" result="r"></cfhttp>
+			<cffile action="write" addnewline="false" file="#udf#" output="#trim(r.filecontent)#">
 		
 		</cfif>
 		

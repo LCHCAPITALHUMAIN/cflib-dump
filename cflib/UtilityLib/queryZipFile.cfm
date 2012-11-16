@@ -1,3 +1,35 @@
+<!---
+This library is part of the Common Function Library Project. An open source
+	collection of UDF libraries designed for ColdFusion 5.0 and higher. For more information,
+	please see the web site at:
+
+		http://www.cflib.org
+
+	Warning:
+	You may not need all the functions in this library. If speed
+	is _extremely_ important, you may want to consider deleting
+	functions you do not plan on using. Normally you should not
+	have to worry about the size of the library.
+
+	License:
+	This code may be used freely.
+	You may modify this code as you see fit, however, this header, and the header
+	for the functions must remain intact.
+
+	This code is provided as is.  We make no warranty or guarantee.  Use of this code is at your own risk.
+--->
+
+<cfscript>
+/**
+ * Reads a zip file and converts the entries into a query object (including optional binary data.)
+ * 
+ * @param filePath 	 Full path to zip file. (Required)
+ * @param returnBinary 	 True/False; default is false. Should binary data be returned in the query. This is useful if you need to write the contents of a zip file to a database or you want to dynamically render contents of a zip file using cfcontent. (Optional)
+ * @param regexFilter 	 A regex string to filter query results by the name in the zip file (the name would include pathing information.) For more advanced filtering, you can use a Query-of-Queries on the resultset. (Optional)
+ * @return Returns a query. 
+ * @author Dan G. Switzer, II (dswitzer@pengoworks.com) 
+ * @version 1, October 9, 2006 
+ */
 function queryZipFile(filePath) {
 	// create a new zip file object
 	var zipFile = createObject("java", "java.util.zip.ZipFile").init(filePath); // ZipFile
@@ -123,3 +155,4 @@ function queryZipFile(filePath) {
 	// return the query object
 	return getZipInfo;
 }
+</cfscript>

@@ -1,3 +1,38 @@
+<!---
+This library is part of the Common Function Library Project. An open source
+	collection of UDF libraries designed for ColdFusion 5.0 and higher. For more information,
+	please see the web site at:
+
+		http://www.cflib.org
+
+	Warning:
+	You may not need all the functions in this library. If speed
+	is _extremely_ important, you may want to consider deleting
+	functions you do not plan on using. Normally you should not
+	have to worry about the size of the library.
+
+	License:
+	This code may be used freely.
+	You may modify this code as you see fit, however, this header, and the header
+	for the functions must remain intact.
+
+	This code is provided as is.  We make no warranty or guarantee.  Use of this code is at your own risk.
+--->
+
+<cfscript>
+/**
+ * Returns matched substrings and subexpressions from a string based on a regular expression pattern
+ * v1.0 by Adam Cameron
+ * 
+ * @param pattern 	 A regular expression to match. (Required)
+ * @param string 	 A string to find matches in. (Required)
+ * @param all 	 Whether to match one (default) or all matches. (Optional)
+ * @param start 	 The position in the string to start looking for matches. (Optional)
+ * @param caseSensitive 	 Whether to do a case-sensitive or case-insensitive (default) match. (Optional)
+ * @return An array of structs, similar to reFind() when set to return subexpressions. 
+ * @author Adam Cameron (adamcameroncoldfusion@gmail.com) 
+ * @version 1.0, September 29, 2012 
+ */
 array function stringFind(required string pattern, required string string, boolean all=false, numeric start=1, boolean caseSensitive=false){
 	var result	= [];
 	var matches	= [];
@@ -32,3 +67,4 @@ array function stringFind(required string pattern, required string string, boole
 	} while(matches.pos[1]);
 	return result;
 }
+</cfscript>

@@ -1,3 +1,36 @@
+<!---
+This library is part of the Common Function Library Project. An open source
+	collection of UDF libraries designed for ColdFusion 5.0 and higher. For more information,
+	please see the web site at:
+
+		http://www.cflib.org
+
+	Warning:
+	You may not need all the functions in this library. If speed
+	is _extremely_ important, you may want to consider deleting
+	functions you do not plan on using. Normally you should not
+	have to worry about the size of the library.
+
+	License:
+	This code may be used freely.
+	You may modify this code as you see fit, however, this header, and the header
+	for the functions must remain intact.
+
+	This code is provided as is.  We make no warranty or guarantee.  Use of this code is at your own risk.
+--->
+
+<cfscript>
+/**
+ * Converts a number from one arbitrary base to another arbitrary base.
+ * v1.0 by Adam Cameron
+ * 
+ * @param number 	 The number to convert. (Required)
+ * @param fromBase 	 The base to convert from.  Can either be one of BIN, DEC, HEX, BASE36, BASE62 or an 'alphabet' or characters that represent the digits. EG: OCTAL would be 01234567. (Required)
+ * @param toBase 	 The base to convert to. Has same value rules as fromBase. (Required)
+ * @return Returns a string, which is the original number converted to the specified base 
+ * @author Adam Cameron (adamcameroncoldfusion@gmail.com) 
+ * @version 1, September 24, 2012 
+ */
 string function baseMToBaseN(required string number, required string fromBase, required string toBase){
 	if (fromBase == toBase){	// ie: there's nothing to do
 		return number;
@@ -61,3 +94,4 @@ string function baseMToBaseN(required string number, required string fromBase, r
 	
 	return result;
 }
+</cfscript>

@@ -1,3 +1,38 @@
+<!---
+This library is part of the Common Function Library Project. An open source
+	collection of UDF libraries designed for ColdFusion 5.0 and higher. For more information,
+	please see the web site at:
+
+		http://www.cflib.org
+
+	Warning:
+	You may not need all the functions in this library. If speed
+	is _extremely_ important, you may want to consider deleting
+	functions you do not plan on using. Normally you should not
+	have to worry about the size of the library.
+
+	License:
+	This code may be used freely.
+	You may modify this code as you see fit, however, this header, and the header
+	for the functions must remain intact.
+
+	This code is provided as is.  We make no warranty or guarantee.  Use of this code is at your own risk.
+--->
+
+<cfscript>
+/**
+ * Produces a Calendar for a given month and year.
+ * 
+ * @param curMonth 	 The month to display. 
+ * @param curYear 	 The year to display. 
+ * @param height 	 Height of the table cells. Defaults to 40. 
+ * @param width 	 Width of the table cells. Defaults to 60. 
+ * @param titleStyle 	 Style to apply to title row. 
+ * @param numberStyle 	 Style to apply to days of the month. 
+ * @return Returns a string. 
+ * @author William Steiner (williams@hkusa.com) 
+ * @version 1, April 12, 2002 
+ */
 function createCalendar(curMonth,curYear) {
 	var outString = "";
 	var firstDay = CreateDate(curYear, curMonth, 1);
@@ -48,3 +83,4 @@ function createCalendar(curMonth,curYear) {
 	outString=outString & "</table>";
 	return outString;
 }
+</cfscript>

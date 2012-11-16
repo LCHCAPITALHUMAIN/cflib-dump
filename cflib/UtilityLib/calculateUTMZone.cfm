@@ -1,3 +1,34 @@
+<!---
+This library is part of the Common Function Library Project. An open source
+	collection of UDF libraries designed for ColdFusion 5.0 and higher. For more information,
+	please see the web site at:
+
+		http://www.cflib.org
+
+	Warning:
+	You may not need all the functions in this library. If speed
+	is _extremely_ important, you may want to consider deleting
+	functions you do not plan on using. Normally you should not
+	have to worry about the size of the library.
+
+	License:
+	This code may be used freely.
+	You may modify this code as you see fit, however, this header, and the header
+	for the functions must remain intact.
+
+	This code is provided as is.  We make no warranty or guarantee.  Use of this code is at your own risk.
+--->
+
+<cfscript>
+/**
+ * Calculates correct UTM zone for a given latitude/longitude point.
+ * 
+ * @param lat 	 Latitude value. (Required)
+ * @param lon 	 Longitude value. (Required)
+ * @return Returns a number. 
+ * @author Wayne Graham (wsgrah@wm.edu) 
+ * @version 1, February 3, 2006 
+ */
 function calculateUTMZone(lat,lon){
 	// make sure the longitude is between -180 and 179.9
 	var lonTemp = (arguments.lon + 180) - int((arguments.lon + 180) / 360) * 360 - 180;
@@ -12,3 +43,4 @@ function calculateUTMZone(lat,lon){
 	}			
 	return zoneNumber;
 }
+</cfscript>

@@ -1,3 +1,33 @@
+<!---
+This library is part of the Common Function Library Project. An open source
+	collection of UDF libraries designed for ColdFusion 5.0 and higher. For more information,
+	please see the web site at:
+
+		http://www.cflib.org
+
+	Warning:
+	You may not need all the functions in this library. If speed
+	is _extremely_ important, you may want to consider deleting
+	functions you do not plan on using. Normally you should not
+	have to worry about the size of the library.
+
+	License:
+	This code may be used freely.
+	You may modify this code as you see fit, however, this header, and the header
+	for the functions must remain intact.
+
+	This code is provided as is.  We make no warranty or guarantee.  Use of this code is at your own risk.
+--->
+
+<!---
+ cffunction that takes a text string and a format and returns a date object.
+ 
+ @param textString 	 Date as a string. (Required)
+ @param format 	 Format of the date. Valid values are: mmddyyyy,yyyymmdd,ddmmyyyy,yyyyddmm (Optional)
+ @return Returns a date. 
+ @author Bill Rawlinson (wmrawlin@sbcs.com) 
+ @version 1, January 21, 2005 
+--->
 <cffunction name="textToDate" returnType="string" output="false" hint="converts a numeric string to a date object">
 	<cfargument name="textString" type="string"	requied="true" hint="numeric string to convert to a date object">
 	<cfargument name="format" type="string" required="false" default="mmddyyyy"	hint="best guess at the format of the string; valid values are mmddyyyy | yyyymmdd | ddmmyyyy | yyyyddmm">

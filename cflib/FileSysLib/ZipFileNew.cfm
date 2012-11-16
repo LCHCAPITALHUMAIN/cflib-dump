@@ -1,3 +1,35 @@
+<!---
+This library is part of the Common Function Library Project. An open source
+	collection of UDF libraries designed for ColdFusion 5.0 and higher. For more information,
+	please see the web site at:
+
+		http://www.cflib.org
+
+	Warning:
+	You may not need all the functions in this library. If speed
+	is _extremely_ important, you may want to consider deleting
+	functions you do not plan on using. Normally you should not
+	have to worry about the size of the library.
+
+	License:
+	This code may be used freely.
+	You may modify this code as you see fit, however, this header, and the header
+	for the functions must remain intact.
+
+	This code is provided as is.  We make no warranty or guarantee.  Use of this code is at your own risk.
+--->
+
+<cfscript>
+/**
+ * Create a zip file of a directory or just a file.
+ * 
+ * @param zipPath 	 File name of the zip to create. (Required)
+ * @param toZip 	 Folder or full path to file to add to zip. (Required)
+ * @param relativeFrom 	 Some or all of the toZip path, from which the entries in the zip file will be relative (Optional)
+ * @return Returns nothing. 
+ * @author Nathan Dintenfass (nathan@changemedia.com) 
+ * @version 1.1, January 19, 2004 
+ */
 function zipFileNew(zipPath,toZip){
 	//make a fileOutputStream object to put the ZipOutputStream into
 	var output = createObject("java","java.io.FileOutputStream").init(zipPath);
@@ -93,3 +125,4 @@ function zipFileNew(zipPath,toZip){
 	//return nothing
 	return "";
 }
+</cfscript>

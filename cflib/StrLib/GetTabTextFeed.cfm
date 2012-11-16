@@ -1,3 +1,33 @@
+<!---
+This library is part of the Common Function Library Project. An open source
+	collection of UDF libraries designed for ColdFusion 5.0 and higher. For more information,
+	please see the web site at:
+
+		http://www.cflib.org
+
+	Warning:
+	You may not need all the functions in this library. If speed
+	is _extremely_ important, you may want to consider deleting
+	functions you do not plan on using. Normally you should not
+	have to worry about the size of the library.
+
+	License:
+	This code may be used freely.
+	You may modify this code as you see fit, however, this header, and the header
+	for the functions must remain intact.
+
+	This code is provided as is.  We make no warranty or guarantee.  Use of this code is at your own risk.
+--->
+
+<cfscript>
+/**
+ * This UDF will take a Tab delimited text file and parse it into a mutlidimensional array
+ * 
+ * @param x 	 Tab text to parse. (Required)
+ * @return Retuns an array. 
+ * @author Ray Bayly (rbayly@mediageneral.com) 
+ * @version 1, May 9, 2003 
+ */
 function GetTabTextFeed(X){
 	//Declare all variables used within this UDF
 	var Xy = "";//This is an array that holds the lines
@@ -33,3 +63,4 @@ function GetTabTextFeed(X){
 	}
 	return Xy;
 }
+</cfscript>

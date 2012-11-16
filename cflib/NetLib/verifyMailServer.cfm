@@ -1,3 +1,43 @@
+<!---
+This library is part of the Common Function Library Project. An open source
+	collection of UDF libraries designed for ColdFusion 5.0 and higher. For more information,
+	please see the web site at:
+
+		http://www.cflib.org
+
+	Warning:
+	You may not need all the functions in this library. If speed
+	is _extremely_ important, you may want to consider deleting
+	functions you do not plan on using. Normally you should not
+	have to worry about the size of the library.
+
+	License:
+	This code may be used freely.
+	You may modify this code as you see fit, however, this header, and the header
+	for the functions must remain intact.
+
+	This code is provided as is.  We make no warranty or guarantee.  Use of this code is at your own risk.
+--->
+
+<!---
+ Verifies a mail server connection.
+ 
+ @param protocol 	 Mail protocol: SMTP, POP3 or IMAP (Required)
+ @param host 	 Mail server name (Example: pop.gmail.com) (Required)
+ @param port 	 Mail server port number. Default is -1, meaning use the default port for this protocol) (Optional)
+ @param user 	 Mail account username (Required)
+ @param password 	 Mail account password (Required)
+ @param useSSL 	 If true, use SSL (Secure Sockets Layer). Default is false. (Optional)
+ @param useTLS 	 If true, use TLS (Transport Level Security). Default to false. (Optional)
+ @param enforceTLS 	 If true, require TLS support, Default is false. (Optional)
+ @param timeout 	 Maximum milliseconds to wait for connection. Default is 0 (wait forever) (Optional)
+ @param debug 	 If true, enable debugging. By default information is sent to is sent to System.out. Default is false. (Optional)
+ @param logPath 	 Send debugging output to this file. Absolute file path. Has no effect if debugging is disabled. (Optional)
+ @param append 	 If false, the existing log file will be overwritten. Default is true. (Optional)
+ @return Returns a struct. 
+ @author Leigh (cfsearching@gmail.com) 
+ @version 1, July 1, 2010 
+--->
 <cffunction name="verifyMailServer" returntype="struct" access="public" output="true">
 	<cfargument name="protocol" type="string" required="true" hint="Mail protocol: SMTP, POP3 or IMAP" />
 	<cfargument name="host" type="string" required="true" hint="Mail server name (Example: pop.gmail.com)"/>

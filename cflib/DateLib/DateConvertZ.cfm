@@ -1,3 +1,35 @@
+<!---
+This library is part of the Common Function Library Project. An open source
+	collection of UDF libraries designed for ColdFusion 5.0 and higher. For more information,
+	please see the web site at:
+
+		http://www.cflib.org
+
+	Warning:
+	You may not need all the functions in this library. If speed
+	is _extremely_ important, you may want to consider deleting
+	functions you do not plan on using. Normally you should not
+	have to worry about the size of the library.
+
+	License:
+	This code may be used freely.
+	You may modify this code as you see fit, however, this header, and the header
+	for the functions must remain intact.
+
+	This code is provided as is.  We make no warranty or guarantee.  Use of this code is at your own risk.
+--->
+
+<cfscript>
+/**
+ * Similar to DateConvert, but provides local2zone and zone2local conversion from one time zone to another.
+ * 
+ * @param conversionType 	 Conversion type to use.  Options are zone2local (date object is from the specified time zone and this will convert it to local time) and local2zone (date object is based on local server time and this will convert it to the specfied time zone.):   
+ * @param dateObj 	 Date object you want to convert. 
+ * @param zoneInfo 	 Standard time zone abbreviation as well as standard plus mod such as PST-8. 
+ * @return Returns a date/time object. 
+ * @author Chris Wigginton (cwigginton@macromedia.com) 
+ * @version 1, November 26, 2001 
+ */
 function DateConvertZ(conversionType, dateObj, zoneInfo)
 {
   var targetZone = "";
@@ -73,3 +105,4 @@ function DateConvertZ(conversionType, dateObj, zoneInfo)
   }
   return "{ts 'yyyy-mm-dd HH:mm:ss'}"; // error return
 }
+</cfscript>

@@ -1,3 +1,44 @@
+<!---
+This library is part of the Common Function Library Project. An open source
+	collection of UDF libraries designed for ColdFusion 5.0 and higher. For more information,
+	please see the web site at:
+
+		http://www.cflib.org
+
+	Warning:
+	You may not need all the functions in this library. If speed
+	is _extremely_ important, you may want to consider deleting
+	functions you do not plan on using. Normally you should not
+	have to worry about the size of the library.
+
+	License:
+	This code may be used freely.
+	You may modify this code as you see fit, however, this header, and the header
+	for the functions must remain intact.
+
+	This code is provided as is.  We make no warranty or guarantee.  Use of this code is at your own risk.
+--->
+
+<!---
+ I create a new user defined cache region in Ehcache with customizable parameters.
+ 
+ @param name 	 Name of the cache. (Required)
+ @param maxElementsInMemory 	 Defines max elements in memory. Defaults to 10000. (Optional)
+ @param maxElementsOnDisk 	 Defines max elements on disk. Defaults to 10000000. (Optional)
+ @param memoryStoreEvictionPolicy 	 Eviction policy for the cache. Defaults to LRU. (Optional)
+ @param clearOnFlush 	 Boolean for cache flushing. Defaults to true. (Optional)
+ @param eternal 	 Boolean for eternal setting. Defaults to false. (Optional)
+ @param timeToIdleSeconds 	 Time to idle seconds setting. Defaults to 86400 (Optional)
+ @param timeToLiveSeconds 	 Time to live seconds setting. Defaults to 86400 (Optional)
+ @param overflowToDisk 	 Boolean for overflow to disk setting. Defaults to false. (Optional)
+ @param diskPersistent 	 Disk persistence setting. Defaults to false. (Optional)
+ @param diskSpoolBufferSizeMB 	 Disk spool buffer size setting. Defaults to 30. (Optional)
+ @param diskAccessStripes 	 Disk access stripes setting. Defaults to 1. (Optional)
+ @param diskExpiryThreadIntervalSeconds 	 Disk expiry thread interval seconds setting. Defaults to 120. (Optional)
+ @return Returns nothing. 
+ @author Rob Brooks-Bilson (rbils@amkor.com) 
+ @version 1, June 22, 2011 
+--->
 <cffunction name="cacheCreate" output="false" returntype="void" 
 	hint="I create a new user defined cache region in Ehcache" 
 	description="I create a new user defined cache region in Ehcache. This function

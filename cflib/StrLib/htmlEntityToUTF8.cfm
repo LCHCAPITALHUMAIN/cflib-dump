@@ -1,3 +1,34 @@
+<!---
+This library is part of the Common Function Library Project. An open source
+	collection of UDF libraries designed for ColdFusion 5.0 and higher. For more information,
+	please see the web site at:
+
+		http://www.cflib.org
+
+	Warning:
+	You may not need all the functions in this library. If speed
+	is _extremely_ important, you may want to consider deleting
+	functions you do not plan on using. Normally you should not
+	have to worry about the size of the library.
+
+	License:
+	This code may be used freely.
+	You may modify this code as you see fit, however, this header, and the header
+	for the functions must remain intact.
+
+	This code is provided as is.  We make no warranty or guarantee.  Use of this code is at your own risk.
+--->
+
+<!---
+ Converts HTML encoded entities into utf8 characters.
+ version 0.1 by Matt Casey
+ version 1.0 by Adam Cameron - using an array instead of a list converted to an array for the look-up data.  Made replacement case-insensitive.
+ 
+ @param source 	 A string to parse (Required)
+ @return A string with HTML entities replaced with UTF-8 characters 
+ @author Matt Casey (matt@digitalhappy.com) 
+ @version 1, September 16, 2012 
+--->
 <cffunction name="htmlEntityToUTF8" output="false" access="public" returntype="any" hint="">
 	<cfargument name="source" type="string" required="true">
 	<cfset var idx = 0>

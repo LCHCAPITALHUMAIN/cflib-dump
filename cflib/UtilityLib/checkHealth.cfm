@@ -1,3 +1,32 @@
+<!---
+This library is part of the Common Function Library Project. An open source
+	collection of UDF libraries designed for ColdFusion 5.0 and higher. For more information,
+	please see the web site at:
+
+		http://www.cflib.org
+
+	Warning:
+	You may not need all the functions in this library. If speed
+	is _extremely_ important, you may want to consider deleting
+	functions you do not plan on using. Normally you should not
+	have to worry about the size of the library.
+
+	License:
+	This code may be used freely.
+	You may modify this code as you see fit, however, this header, and the header
+	for the functions must remain intact.
+
+	This code is provided as is.  We make no warranty or guarantee.  Use of this code is at your own risk.
+--->
+
+<!---
+ Serve system checks for nagios or other monitoring solutions.
+ 
+ @param sCheckType 	 Type to check. Values are jvmMem, reqTime, queu. Defaults to jvmMem. (Optional)
+ @return Returns a struct. 
+ @author Sigi (siegfried.heckl@siemens.com) 
+ @version 1, October 10, 2011 
+--->
 <cffunction name="checkHealth" access="public" output="false" returntype="struct" hint="serve system checks for nagios or other monitoring solutions">
   <cfargument name="sCheckType" type="string" default="jvmMem" hint="(jvmMem|reqTime|queu)" />
 

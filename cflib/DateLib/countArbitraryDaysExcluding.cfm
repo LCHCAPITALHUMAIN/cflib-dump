@@ -1,3 +1,38 @@
+<!---
+This library is part of the Common Function Library Project. An open source
+	collection of UDF libraries designed for ColdFusion 5.0 and higher. For more information,
+	please see the web site at:
+
+		http://www.cflib.org
+
+	Warning:
+	You may not need all the functions in this library. If speed
+	is _extremely_ important, you may want to consider deleting
+	functions you do not plan on using. Normally you should not
+	have to worry about the size of the library.
+
+	License:
+	This code may be used freely.
+	You may modify this code as you see fit, however, this header, and the header
+	for the functions must remain intact.
+
+	This code is provided as is.  We make no warranty or guarantee.  Use of this code is at your own risk.
+--->
+
+<cfscript>
+/**
+ * Returns the number of days between a start and end date, excluding a specified list of days, and allowing for an exclusion list
+ * 
+ * @param startDate 	 begin date for calculations (Required)
+ * @param endDate 	 end date for calculations (Required)
+ * @param exclude 	 days of week (1=sunday, etc.) to exclude from the count (Optional)
+ * @param includeStartDate 	 boolean to include start date in count (Optional)
+ * @param ignoreTimes 	 boolean to indicate if the times on the dates are to be ignored (Optional)
+ * @param excludeDates 	 array containing simple string dates to exclude from the count (Optional)
+ * @return returns a number 
+ * @author Murray Hopkins (murray@murrah.com.au) 
+ * @version 0, March 3, 2010 
+ */
 function countArbitraryDaysExcluding(startdate,enddate) {
 /*
 Example of use:
@@ -98,3 +133,4 @@ But for this UDF we would generally expect 1 day's difference. Therefore, option
     
     return days;
 }
+</cfscript>

@@ -1,3 +1,36 @@
+<!---
+This library is part of the Common Function Library Project. An open source
+	collection of UDF libraries designed for ColdFusion 5.0 and higher. For more information,
+	please see the web site at:
+
+		http://www.cflib.org
+
+	Warning:
+	You may not need all the functions in this library. If speed
+	is _extremely_ important, you may want to consider deleting
+	functions you do not plan on using. Normally you should not
+	have to worry about the size of the library.
+
+	License:
+	This code may be used freely.
+	You may modify this code as you see fit, however, this header, and the header
+	for the functions must remain intact.
+
+	This code is provided as is.  We make no warranty or guarantee.  Use of this code is at your own risk.
+--->
+
+<cfscript>
+/**
+ * Sorts a two dimensional array by the specified column using quicksort.
+ * 
+ * @param arrayToSort 	 The array to sort. (Required)
+ * @param key 	 Position in the second dimension to sort by. (Required)
+ * @param down 	 Index in fist dimension indicating where to begin sorting. (Required)
+ * @param top 	 Position in first dimension indicating where to end sorting. (Required)
+ * @return Returns an array. 
+ * @author Matthew Wear (matt.b.wear@gmail.com) 
+ * @version 1, March 28, 2006 
+ */
 function quickSort2D(arrayToSort, key, down, top) {
 	var i = down;
 	var j = top;
@@ -66,3 +99,4 @@ function quickSort2D(arrayToSort, key, down, top) {
 
 	return arrayToSort;
 }
+</cfscript>

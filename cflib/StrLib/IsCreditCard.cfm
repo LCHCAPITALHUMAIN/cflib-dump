@@ -1,3 +1,38 @@
+<!---
+This library is part of the Common Function Library Project. An open source
+	collection of UDF libraries designed for ColdFusion 5.0 and higher. For more information,
+	please see the web site at:
+
+		http://www.cflib.org
+
+	Warning:
+	You may not need all the functions in this library. If speed
+	is _extremely_ important, you may want to consider deleting
+	functions you do not plan on using. Normally you should not
+	have to worry about the size of the library.
+
+	License:
+	This code may be used freely.
+	You may modify this code as you see fit, however, this header, and the header
+	for the functions must remain intact.
+
+	This code is provided as is.  We make no warranty or guarantee.  Use of this code is at your own risk.
+--->
+
+<cfscript>
+/**
+ * Returns TRUE if the string is a valid credit card number.
+ * Modded by RCamden - Check for any non numeric and return false.
+ * Modded by Author - fixed mastercard checking
+ * Updated to use [:digit:] and allow spaces
+ * Corrected nondigit check
+ * 
+ * @param ccNo 	 The credit card number. (Required)
+ * @param cardType 	 One of: AMEX, DINERS, DISCOVER, MASTERCARD, VISA (Optional)
+ * @return Returns a boolean. 
+ * @author Nick de Voil (nick@devoil.com) 
+ * @version 4, August 17, 2004 
+ */
 function IsCreditCard(ccNo)
 {
 	var rv = "";
@@ -34,3 +69,4 @@ function IsCreditCard(ccNo)
 	}
 	return FALSE;
 }
+</cfscript>

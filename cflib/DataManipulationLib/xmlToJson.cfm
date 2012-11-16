@@ -1,3 +1,33 @@
+<!---
+This library is part of the Common Function Library Project. An open source
+	collection of UDF libraries designed for ColdFusion 5.0 and higher. For more information,
+	please see the web site at:
+
+		http://www.cflib.org
+
+	Warning:
+	You may not need all the functions in this library. If speed
+	is _extremely_ important, you may want to consider deleting
+	functions you do not plan on using. Normally you should not
+	have to worry about the size of the library.
+
+	License:
+	This code may be used freely.
+	You may modify this code as you see fit, however, this header, and the header
+	for the functions must remain intact.
+
+	This code is provided as is.  We make no warranty or guarantee.  Use of this code is at your own risk.
+--->
+
+<!---
+ Converts valid xml and valid xhtml to json
+ 
+ @param xml 	 XML to convert. (Optional)
+ @param includeFormatting 	 Boolean value that determines if tabs, line feeds, and carriage returns should be preserved. Defaults to false. (Optional)
+ @return Returns a string. 
+ @author Tony Felice (tfelice@reddoor.biz) 
+ @version 0, February 27, 2009 
+--->
 <cffunction name="xmlToJson" output="false" returntype="any" hint="convert xml to JSON">
 		<cfargument name="xml" default="" required="false" hint="raw xml"/>
 		<cfargument name="includeFormatting" type="boolean" default="false" required="false" hint="whether or not to maintain and encode tabs, linefeeds and carriage returns"/>
